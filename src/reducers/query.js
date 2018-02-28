@@ -2,7 +2,9 @@ import * as types from '../actions/actionType';
 
 const initialState = {
   // Initial Payload
-  payload: '',
+  initialLabels: '',
+  initialAssignees: '',
+  initialMilestones: '',
   // Parameters
   author: '',
   labels: '',
@@ -13,6 +15,8 @@ const initialState = {
   sort: '',
   direction: '',
   since: '',
+  // Results
+  results: '',
   // Loading & Error
   loading: false,
   error: false,
@@ -32,7 +36,7 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, {
         state: action.state
       });
-    case types.ASSIGNEE:
+    case types.QUERY_ASSIGNEE:
       return Object.assign({}, state, {
         assignee: action.assignee
       });
@@ -65,6 +69,30 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, {
         loading: false,
         error: action.error,
+      });
+    case types.QUERY_SUCCESS:
+      return Object.assign({}, state, {
+        results: action.props,
+        loading: false,
+        error: false,
+      });
+    case types.INITIAL_QUERY_LABELS_SUCCESS:
+      return Object.assign({}, state, {
+        initialLabels: action.props,
+        loading: false,
+        error: false,
+      });
+    case types.INITIAL_QUERY_ASSIGNEES_SUCCESS:
+      return Object.assign({}, state, {
+        initialAssignees: action.props,
+        loading: false,
+        error: false,
+      });
+    case types.INITIAL_QUERY_MILESTONES_SUCCESS:
+      return Object.assign({}, state, {
+        initialMilestones: action.props,
+        loading: false,
+        error: false,
       });
   }
   return state;
