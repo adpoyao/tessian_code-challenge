@@ -1,6 +1,7 @@
 import * as types from './actionType';
 
 // SYNC ACTION
+// -- Query Methods 
 export const queryAuthor = (authors) => {
   type: types.QUERY_AUTHOR,
   authors
@@ -25,7 +26,7 @@ export const queryMilestone = (milestone) => {
   type: types.QUERY_MILESTONE,
   milestone
 };
-export const querySort = (SORT) => {
+export const querySort = (sort) => {
   type: types.QUERY_SORT,
   sort
 };
@@ -37,18 +38,30 @@ export const querySince = (since) => {
   type: types.QUERY_SINCE,
   since
 };
+
+// -- Query Results 
 export const queryRequest = () => {
   type: types.QUERY_REQUEST
 };
-export const querySince = (error) => {
+export const queryError = (error) => {
   type: types.QUERY_ERROR,
   error
+};
+export const querySuccess = (props) => {
+  types: types.QUERY_SUCCESS,
+  props
+};
+export const initialQuerySuccess = (props) => {
+  type: types.INITIAL_QUERY_SUCCESS
+  props
 };
 
 
 // ASYNC ACTION
-export const queryIssues = () => dispatch => {
-  return fetch('https://api.github.com/repos/atom/atom/issues?creator=johnislarry&', {
+export const initialQuery = () => dispatch => {
+  dispatch(queryRequest())
+  // parameter: i.e. creator=johnislarry&
+  return fetch(`https://api.github.com/repos/atom/atom/issues}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -56,5 +69,21 @@ export const queryIssues = () => dispatch => {
     },
   })
   .then(res => res.json())
+  .then(res => dispatch(initialQuerySuccess(res)))
+  .then(res => console.log(res))
+}
+
+export const query = (parameter) => dispatch => {
+  dispatch(queryRequest())
+  // parameter: i.e. creator=johnislarry&
+  return fetch(`https://api.github.com/repos/atom/atom/issues?${parameter}}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+  })
+  .then(res => res.json())
+  .then(res => dispatch(querySuccess(res)))
   .then(res => console.log(res))
 };

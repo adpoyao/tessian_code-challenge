@@ -1,6 +1,8 @@
 import * as types from '../actions/actionType';
 
 const initialState = {
+  // Initial Payload
+  payload: '',
   // Parameters
   author: '',
   labels: '',
