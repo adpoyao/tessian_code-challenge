@@ -6,8 +6,8 @@ import * as actions from '../actions';
 export class SearchResults extends Component {
   handleSearchButton = () => {
     let author, label, assignee, milestone, mentioned, state, sort, direction;
-    this.props.query.author ? author = `author=${this.props.query.author}&` : author = '';
-    this.props.query.labels ? label = `label=${this.props.query.labels}&` : label = '';
+    this.props.query.author ? author = `creator=${this.props.query.author}&` : author = '';
+    this.props.query.labels ? label = `labels=${this.props.query.labels}&` : label = '';
     this.props.query.assignee ? assignee = `assignee=${this.props.query.assignee}&` : assignee = '';
     this.props.query.milestone ? milestone = `milestone=${this.props.query.milestone}&` : milestone = '';
     this.props.query.mentioned ? mentioned = `mentioned=${this.props.query.mentioned}&` : mentioned = '';
