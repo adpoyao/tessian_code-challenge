@@ -2,13 +2,13 @@ import * as types from './actionType';
 
 // SYNC ACTION
 // -- Query Methods 
-export const queryAuthor = (authors) => ({
+export const queryAuthor = (author) => ({
   type: types.QUERY_AUTHOR,
-  authors
+  author
 });
-export const queryLabels = (labels) => ({
+export const queryLabels = (label) => ({
   type: types.QUERY_LABELS,
-  labels
+  label
 });
 export const queryState = (state) => ({
   type: types.QUERY_STATE,
@@ -48,7 +48,7 @@ export const queryError = (error) => ({
   error
 });
 export const querySuccess = (props) => ({
-  types: types.QUERY_SUCCESS,
+  type: types.QUERY_SUCCESS,
   props
 });
 
@@ -109,7 +109,6 @@ export const initialQueryMilestones = () => dispatch => {
 
 export const query = (parameter) => dispatch => {
   dispatch(queryRequest())
-  // parameter: i.e. creator=johnislarry&
   return fetch(`https://api.github.com/repos/atom/atom/issues?${parameter}}`, {
     method: 'GET',
     headers: {

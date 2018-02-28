@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import AccordionRoot from './AccordionRoot';
-import Selections from './Selections';
-import SearchResults from './SearchResults';
+import SearchPage from './SearchPage';
 
 import * as actions from '../actions/query';
 
@@ -23,10 +22,9 @@ export class Dashboard extends Component {
     }
 
     return (
-      <div>
-        <Selections />
+      <div className="dashboard">
         <AccordionRoot />
-        <SearchResults />
+        <SearchPage />
       </div>
     )
   }

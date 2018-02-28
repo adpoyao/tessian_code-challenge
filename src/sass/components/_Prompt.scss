@@ -1,0 +1,8 @@
+.prompt {
+  @include space-mono-font(1.6em, black);
+  margin: 50px 0 40px;
+  .subcaption {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+}

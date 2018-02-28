@@ -5,13 +5,17 @@ const initialState = {
   initialLabels: '',
   initialAssignees: '',
   initialMilestones: '',
+  initialStates: ['Open', 'Closed', 'All'],
+  initialSort: ['Created', 'Updated', 'Comments'],
+  initialDirection: ['Asc', 'Desc'],
+  initialSince: '',
   // Parameters
   author: '',
   labels: '',
-  state: '',
   assignee: '',
-  mentioned: '',
   milestone: '',
+  mentioned: '',
+  state: '',
   sort: '',
   direction: '',
   since: '',
@@ -94,6 +98,7 @@ export default function reducer(state = initialState, action) {
         loading: false,
         error: false,
       });
+    default: break;
   }
   return state;
 }

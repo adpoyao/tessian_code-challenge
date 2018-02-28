@@ -13,7 +13,7 @@ export default class Nav extends Component {
           </a>
         </div>
         <div  className="right-wrapper">
-          <a href="https://www.eddiepo.co/" target="_blank"><button>About</button></a>
+          <a href="https://www.eddiepo.co/" target="_blank" rel="noopener noreferrer"><button>About</button></a>
         </div>
       </div>
     )

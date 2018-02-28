@@ -1,0 +1,32 @@
+.accordion-wrapper {
+  @include space-mono-font(1.2em, white);
+  font-weight: 100;
+  max-width: 360px;
+}
+
+.accordion-item {
+  background: $primaryBlue;
+  margin: 20px;
+}
+
+.react-sanfona-item-title {
+  padding: 20px;
+}
+
+.react-sanfona-item-body {
+  background: $primarySkyBlue;
+  border: 1px white solid;
+}
+
+.detail-list {
+  @include helvetica-font(0.7em, white);
+  border-top: 5px white solid;
+  padding: 12px;
+  transform: scale(1);
+  transition: 0.2s all ease;
+  &:hover {
+   background: $primaryGrey;
+    transition: 0.2s all ease;
+    cursor: pointer;
+  }
+}

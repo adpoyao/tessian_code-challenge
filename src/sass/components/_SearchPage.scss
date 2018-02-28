@@ -1,0 +1,9 @@
+.search-page {
+  @include space-mono-font(2em, black);
+  margin: 50px 0 40px;
+  max-width: 360px;
+  .subcaption {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+}

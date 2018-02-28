@@ -75,6 +75,69 @@ table {
   font-weight: 100;
   letter-spacing: 3px; }
 
+.accordion-wrapper {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 100;
+  max-width: 360px; }
+
+.accordion-item {
+  background: #0a1129;
+  margin: 20px; }
+
+.react-sanfona-item-title {
+  padding: 20px; }
+
+.react-sanfona-item-body {
+  background: #157dfb;
+  border: 1px white solid; }
+
+.detail-list {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.7em;
+  color: white;
+  border-top: 5px white solid;
+  padding: 12px;
+  transform: scale(1);
+  transition: 0.2s all ease; }
+  .detail-list:hover {
+    background: #27343e;
+    transition: 0.2s all ease;
+    cursor: pointer; }
+
+.prompt {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  color: black;
+  margin: 50px 0 40px; }
+  .prompt .subcaption {
+    font-size: 0.6em;
+    margin-top: 10px; }
+
+.search-wrapper {
+  margin: 30px; }
+
+.search-page {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  color: black;
+  margin: 50px 0 40px;
+  max-width: 360px; }
+  .search-page .subcaption {
+    font-size: 0.6em;
+    margin-top: 10px; }
+
+.search-result {
+  margin: 50px 0 40px; }
+
+.dashboard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: 3%;
+  margin-right: 3%; }
+
 button {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8em;
