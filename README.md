@@ -15,7 +15,9 @@
 * GitHub API
 
 ### NOTES:
-This is a single page app challenge that was planned and built in a day. Although configuration is heavy for a small app, I chose to use ReactJS with Redux because this is the position I am applying for. I made use of ES6 syntax/features, such as arrow functions, template literals & basic Promises. I didn't force a need to use spread operator, but am able to call it if needed.
+This is a single page app challenge that was planned and built in a day. Although configuration is heavy for a small app, I chose to use ReactJS with Redux because this is the position I am applying for and search queries like this could be easily compartmentalized. I made use of ES6 syntax/features, such as arrow functions, template literals & basic Promises. I didn't force a need to use spread operator, but am able to call it if needed.
+
+For the point-and-click approach, I made the filters accordion style. Considering the large amount of results being returned as selectable filters (such as Creator, Assignees, and Mentioned), I think it's suitable to hide these items until they are needed.
 
 Seeing that I have surpassed the recommended time, I drew the line up to this point thus the challenge is incomplete; however, it was a fun one and I wanted to keep building at it.
 
