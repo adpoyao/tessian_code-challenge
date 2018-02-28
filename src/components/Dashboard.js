@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import AccordionRoot from './AccordionRoot';
+import Selections from './Selections';
+import SearchResults from './SearchResults';
+
 import * as actions from '../actions/query';
 
 export class Dashboard extends Component {
@@ -11,10 +15,25 @@ export class Dashboard extends Component {
   }
   
   render(){
+
+    if(this.props.loading){
+      return (
+        <div>Loading!</div>
+      )
+    }
+
     return (
-      <h1>Dashboard</h1>
+      <div>
+        <Selections />
+        <AccordionRoot />
+        <SearchResults />
+      </div>
     )
   }
 };
 
-export default connect()(Dashboard);
+const mapStateToProps = state => ({
+  loading: state.query.loading,
+});
+
+export default connect(mapStateToProps)(Dashboard);

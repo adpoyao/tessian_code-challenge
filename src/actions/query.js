@@ -119,5 +119,4 @@ export const query = (parameter) => dispatch => {
   })
   .then(res => res.json())
   .then(res => dispatch(querySuccess(res)))
-  .then(res => console.log(res))
 };
