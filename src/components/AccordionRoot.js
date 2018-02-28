@@ -30,7 +30,7 @@ export class AccordionRoot extends Component {
 
             if (key === 'Assignee'){
               if(this.props.author.length > 0){
-                assigneeItems = this.props.labels.map((detail, index) => { return <li key={index}>{detail.login}</li>})}
+                assigneeItems = this.props.author.map((detail, index) => { return <li key={index}>{detail.login}</li>})}
               }
 
               return (

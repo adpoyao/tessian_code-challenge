@@ -1,0 +1,33 @@
+.navigation {
+  background: $primaryBlue;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.left-wrapper {
+  margin-left: 1%;
+}
+
+.right-wrapper {
+  margin-right: 3%;
+}
+
+.logo-wrapper {
+  width: 130px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tessian-logo {
+  width: 40px;
+}
+
+.tessian-name {
+  @include helvetica-font(0.8em, white);
+  font-weight: 100;
+  letter-spacing: 3px;
+}

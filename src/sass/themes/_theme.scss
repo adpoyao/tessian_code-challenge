@@ -1,0 +1,21 @@
+button {
+  @include helvetica-font(0.8em, white);
+  background: $primaryGreen;
+  width: 115px;
+  height: 45px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  transition: 0.2s ease all;
+  
+  &:hover {
+    background: $hoverGreen;
+    transition: 0.2s ease all;
+    cursor: pointer;
+  }
+}
+
+a {
+  text-decoration: none;
+}
